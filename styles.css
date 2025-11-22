@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "youngSerif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "outfit";
+  src: url(assets/fonts/outfit/static/Outfit-Regular.ttf) format("truetype");
+}
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "outfit", sans-serif;
+}
+html {
+  background-color: hsl(30, 54%, 90%);
+}
+body {
+  display: flex;
+  place-content: center;
+  /* flex-direction: column; stack children vertically
+  justify-content: center; vertical centering
+  align-items: center; horizontal centering */
+  
+}
+.text {
+  text-align: left;
+}
+.container {
+  max-width: 700px;
+  background-color: white;
+  padding: 2rem;
+  margin: 100px auto;
+  border-radius: 1.5rem;
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-family: "youngSerif", serif;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 20px;
+}
+p, h3 {
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+}
+.preparation-container {
+  /* width: 600px;
+  height: 160px; */
+  background-color: hsl(330, 100%, 98%);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+  h3 {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+.preparation-container ul li {
+    padding: 5px;
+    /* padding-left: 15px; */
+    color: hsl(30, 10%, 34%);
+}
+.preparation-container ul{
+  padding: 20px;
+}
+.recipe-ingredients {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.recipe-ingredients ul {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "youngSerif", serif;
+    font-weight: 400;
+}
+.recipe-ingredients ul li {
+    padding: 5px;
+    padding-left: 15px;
+    color: hsl(30, 10%, 34%);
+}
+.recipe-instructions {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.recipe-instructions ol {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.recipe-instructions ol li {
+    padding: 5px;
+    padding-left: 15px;
+    color: hsl(30, 10%, 34%);
+    font-family: "Outfit", sans-serif;
+    /* font-weight: 700; */
+}
+.nutritional-value h2 {
+    color: hsl(14, 45%, 36%);
+    font-family: "youngSerif", serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.nutritional-value p {
+    font-size: 16px;
+    color: hsl(30, 10%, 34%);
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.nutritional-value table {
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+.nutritional-value > table > tbody > tr > td {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.nutritional-value > table > tbody > tr > td > .values {
+  font-weight: bold;
+  color: hsl(30, 10%, 34%);
+}
+.nutritional-value > table > tbody > tr:last-child > td {
+  border-bottom: none;
+}
+.nutritional-value table td{
+  padding: 20px 0px 10px 30px;
+}
+@media (max-width: 375px) {
+  /* place content at the top and remove the large top margin */
+  html {
+    background-color: white;
+    /* place-content: start; */
+  }
+  .container {
+    margin: 0 auto; /* remove 100px top space on phones */
+    border-radius: 0; /* optional */
+    padding: 0rem; /* optional, tune as needed */
+  }
+  .container > img {
+    width: 100%;
+    position: relative;
+    margin-left: 0; /* undo the negative offset */
+    border-radius: 0;
+    /* margin-bottom: 20px; */
+    margin-top: 0;
+  }
+  .container h1 {
+    /* font-size: 24px; */
+    margin-bottom: 15px;
+    padding: 0 40px;
+  }
+  .container p {
+    padding: 0 40px;
+  }
+  .preparation-container {
+    margin: 30px;
+  }
+  .recipe-ingredients {
+    margin: 30px;
+    /* padding: 10px; */
+    /* margin: 0 10px 20px 10px; */
+  }
+  .recipe-instructions {
+    margin: 30px;
+    /* margin: 0 10px 20px 10px; */
+  }
+  .nutritional-value {
+    margin: 30px;
+    /* margin: 0 10px 20px 10px; */
+  }
+}
